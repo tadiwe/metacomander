@@ -1,2 +1,4 @@
 # metacomander
-BASH Script to update meta info for BUTT 
+## BASH Script to update metainfo for BUTT (Broadcast using this Tool)
+
+
