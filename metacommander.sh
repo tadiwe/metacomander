@@ -2,7 +2,7 @@
 
 #################################################################################
 ## 
-## Written by Dirk Weinberger
+## Written by Dirk D1W3
 ##
 ## This script helps DJ to sent the Metainfo from a Playlist to Butt.
 ## The playlist file (playlist.in) should contain the Song mfor each line
@@ -13,7 +13,7 @@
 
 SHOWNAME=$1
 
-if [ $SHOWNAME = ""]
+if [[ $SHOWNAME = "" ]] 
 then
     echo "Playlist Tool for Butt"
     echo "Please provide Showname"
