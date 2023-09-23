@@ -8,5 +8,11 @@ The Tool reads the playlist.in file, generate a bash menu. You can choose the wa
 
 ### Installation
 Download the 3 files to a directory of your choice. Add the execute flag for the metacommander.sh script.
-tbd
+Configure B.U.T.T. that IT checks for changes in the metaout.txt File.
+This Script works in MacOS or Linux out of the Box, because the come with a Bash. Windows User need to Install a Bash Shell. This Script requires the Program "dialog". Use your packagemanager to install it. 
+Example in Ubuntu: 
+   sudo apt install dialog
+
+
+
 
