@@ -2,7 +2,7 @@
 
 #################################################################################
 ## 
-## Written by Dirk D1W3
+## Written by Dirk Weinberger (Dirk D1W3) in 2013
 ##
 ## This script helps DJ to sent the Metainfo from a Playlist to Butt.
 ## The playlist file (playlist.in) should contain the Song mfor each line
@@ -27,8 +27,13 @@ BACKTITLE="Radio Commander for B.U.T.T."
 TITLE="Playlist for Show : $SHOWNAME"
 MENU="\nLast Meta Sent: NONE\n\nChoose Metainfo:"
 
-OPTIONS=()
+function sent_out(){
+    echo "$1" > metaout.txt
 
+}
+
+
+OPTIONS=()
 NUM=1
 while read s ; do
     OPTIONS+=("$s" $NUM)
@@ -44,7 +49,8 @@ do
 
     case $exit_code in
             0)
-                echo "$CHOICE" > metaout.txt
+                #echo "$CHOICE" > metaout.txt
+                sent_out "$CHOICE"
                 MENU="\nLast Meta Sent: "$CHOICE"\n\nChoose Metainfo:"
                 INDEX="$CHOICE"
                 ;;
@@ -54,7 +60,8 @@ do
                 exit
                 ;;
             3)
-                echo "$SHOWNAME" > metaout.txt
+                #echo "$SHOWNAME" > metaout.txt
+                sent_out "$SHOWNAME"
                 MENU="\nLast Meta Sent: "$SHOWNAME"\n\nChoose Metainfo:"
                 ;;
     esac
